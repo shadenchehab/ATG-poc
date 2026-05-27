@@ -1,0 +1,5 @@
+# Internal agent files — never committed/synced
+.artifact-registry.json
+.artifact-structure.json
+.chat-manifest.json
+.agent-settings.json
