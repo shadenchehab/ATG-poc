@@ -10,14 +10,26 @@
 
 ## Use cases & success criteria
 
+### Quantitative success thresholds
+
+| Metric | Target | How we measure |
+|--------|--------|----------------|
+| **Data accuracy** | ≥ 95% match vs. SF native report | Run each PoC question in Computer AND pull the same report from SF; compare totals, averages, and rank orders |
+| **Query coverage** | ≥ 80% of PoC questions answerable without workaround | Out of all listed questions below, at least 80% return a valid, accurate answer on first or second attempt |
+| **Response time** | ≤ 30 seconds per question | Measured from prompt submission to full answer rendered |
+| **First-attempt accuracy** | ≥ 70% of questions answered correctly on first try | No follow-up prompt or rephrasing needed to get the right answer |
+| **BU bucketing accuracy** | 100% correct grouping | Every opportunity assigned to the correct BU and sub-service-line bucket vs. ATG-provided mapping |
+
+---
+
 ### Use case 1: Revenue validation & reporting
 
 **Goal:** Prove Computer can answer closed-won revenue questions accurately against SF data.
 
-| Question | Success criteria |
-|----------|-----------------|
-| Total closed-won revenue by service line for Q1 2026 | Results match SF report within rounding tolerance |
-| Top 10 accounts by closed-won dollar volume in Q1 2026 | Correct accounts, correct rank order, correct amounts |
+| # | Question | Quantitative success criteria |
+|---|----------|-------------------------------|
+| 1.1 | Total closed-won revenue by service line for Q1 2026 | Dollar totals per service line within ±1% of SF report |
+| 1.2 | Top 10 accounts by closed-won dollar volume in Q1 2026 | 10/10 correct accounts in correct rank order; amounts within ±1% |
 
 **Dependencies:**
 - Salesforce sync active with opportunity object imported
@@ -30,12 +42,12 @@
 
 **Goal:** Demonstrate Computer can perform multi-dimensional pipeline analysis without pre-built dashboards.
 
-| Question | Success criteria |
-|----------|-----------------|
-| Average deal size by service line, trended QoQ (last 5 quarters) | Correct averages; trend direction matches reality |
-| YTD win rate by service line (closed-won / total closed) | Percentage aligns with SF report; denominator includes lost deals |
-| Average days from creation to close (Q4 2025 deals) | Matches manual calculation on same dataset |
-| Average time in "Initiate Contact" and "Assess" stages by service line | Reasonable durations; directionally validated by ATG team |
+| # | Question | Quantitative success criteria |
+|---|----------|-------------------------------|
+| 2.1 | Average deal size by service line, trended QoQ (last 5 quarters) | Average per service line per quarter within ±2% of SF calculation |
+| 2.2 | YTD win rate by service line (closed-won / total closed) | Win rate percentage within ±1 percentage point of SF report |
+| 2.3 | Average days from creation to close (Q4 2025 deals) | Average within ±1 day of manual SF calculation |
+| 2.4 | Average time in "Initiate Contact" and "Assess" stages by service line | Duration within ±2 days of SF stage history report (if available) |
 
 **Dependencies:**
 - All Use Case 1 dependencies, plus:
@@ -49,12 +61,12 @@
 
 **Goal:** Show Computer can support forward-looking revenue modeling by analyzing close-date distribution and lag metrics.
 
-| Question | Success criteria |
-|----------|-----------------|
-| Distribution of Q1 2026 close dates (Jan vs. Feb vs. Mar) | Correct monthly counts |
-| Average lag from creation to close by service line, year-over-year | Correct calculation; YoY comparison renders clearly |
-| Average lag from close date to anticipated start date | Correct calculation (requires custom field) |
-| Current open pipeline by service line and expected close date | Matches live SF pipeline within sync freshness window |
+| # | Question | Quantitative success criteria |
+|---|----------|-------------------------------|
+| 3.1 | Distribution of Q1 2026 close dates (Jan vs. Feb vs. Mar) | Monthly counts match SF exactly (0% variance - these are counts, not estimates) |
+| 3.2 | Average lag from creation to close by service line, year-over-year | Average within ±1 day; YoY trend direction 100% correct |
+| 3.3 | Average lag from close date to anticipated start date | Average within ±1 day of SF calculation |
+| 3.4 | Current open pipeline by service line and expected close date | Total pipeline value within ±1% of live SF; opportunity count exact match |
 
 **Dependencies:**
 - All Use Case 1 dependencies, plus:
@@ -67,11 +79,11 @@
 
 **Goal:** Enable users to ask questions at Business Unit or sub-service-line level without manually specifying grouping rules each time.
 
-| Question | Success criteria |
-|----------|-----------------|
-| "What's Q1 revenue by BU?" | Correctly groups raw service lines into BU buckets and returns aggregated totals |
-| "Break down ACS into sub-service lines" | Correctly parses opportunities into sub-buckets (e.g., CEMS Integration vs. CEMS Service) |
-| "How does CEMS Integration pipeline compare to CEMS Service?" | Returns accurate split based on parsing rules |
+| # | Question | Quantitative success criteria |
+|---|----------|-------------------------------|
+| 4.1 | "What's Q1 revenue by BU?" | 100% of service lines assigned to correct BU; BU totals within ±1% of manual sum |
+| 4.2 | "Break down ACS into sub-service lines" | 100% of opportunities classified into correct sub-bucket; sub-totals within ±1% |
+| 4.3 | "How does CEMS Integration pipeline compare to CEMS Service?" | Correct split with 0 misclassified opportunities |
 
 **Dependencies:**
 - All Use Case 1 dependencies, plus:
