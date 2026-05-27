@@ -119,4 +119,3 @@ Full walkthrough with ATG stakeholders. Collect feedback. Identify additional qu
 | Stage history not available in SF sync | Cannot answer time-in-stage questions | Pre-validate during setup; if unavailable, calculate estimated stage duration from snapshot timestamps |
 | "Anticipated Start Date" field doesn't exist or is rarely populated | Use Case 3 partially blocked | Confirm field existence upfront; if sparse, flag data quality to ATG |
 | Service line values are inconsistent (typos, variations) | Grouping logic breaks | Pull distinct values early; build normalization into the skill |
-| Sync latency creates discrepancy vs. live SF | Validation fails due to timing | Document sync frequency; compare against same-day SF export |
