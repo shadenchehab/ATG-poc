@@ -8,9 +8,9 @@
 
 ---
 
-## Use cases & success criteria
+## Success Criteria
 
-### Quantitative success thresholds
+PoC is considered successful when the following quantitative thresholds are met across all use cases.
 
 | Metric | Target | How we measure |
 |--------|--------|----------------|
@@ -21,6 +21,8 @@
 | **BU bucketing accuracy** | 100% correct grouping | Every opportunity assigned to the correct BU and sub-service-line bucket vs. ATG-provided mapping |
 
 ---
+
+## Use cases
 
 ### Use case 1: Revenue validation & reporting
 
