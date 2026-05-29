@@ -6,136 +6,123 @@
     <title>Alliance Technical Group | PoC Plan</title>
     <style>
         :root {
-            --bg-primary: #0a0a0f;
-            --bg-secondary: #12121a;
-            --bg-card: #1a1a25;
-            --bg-card-hover: #22222f;
-            --border: #2a2a3a;
-            --border-accent: #4f46e5;
-            --text-primary: #e8e8ed;
-            --text-secondary: #9898a8;
-            --text-muted: #6b6b7b;
-            --accent: #6366f1;
-            --accent-light: #818cf8;
-            --success: #22c55e;
-            --warning: #f59e0b;
-            --danger: #ef4444;
-            --info: #3b82f6;
+            --n100: #ffffff;
+            --n200: #fbfbfb;
+            --n300: #f4f4f4;
+            --n400: #e8e8e8;
+            --n500: #cecece;
+            --n600: #a5a2a4;
+            --n700: #7a7579;
+            --n800: #514c4f;
+            --n900: #3e3c3d;
+            --n1000: #302e2f;
+            --n1100: #211f20;
+            --n1200: #191616;
+            --n1300: #161616;
+            --y400: #ffe600;
+            --y100: #fffcd9;
+            --g500: #7adb12;
+            --b500: #3968f6;
+            --r400: #ff0032;
+            --o400: #ff6c0a;
+            --p300: #8854f6;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
+            background: var(--n1300);
+            color: var(--n100);
+            line-height: 1.5;
             min-height: 100vh;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1120px;
             margin: 0 auto;
-            padding: 40px 24px;
+            padding: 64px 24px;
         }
 
         /* Header */
         .header {
-            margin-bottom: 48px;
-            padding-bottom: 32px;
-            border-bottom: 1px solid var(--border);
+            margin-bottom: 64px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid var(--n1000);
         }
 
-        .header-top {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .eyebrow {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--y400);
             margin-bottom: 16px;
         }
 
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .badge-stage {
-            background: rgba(99, 102, 241, 0.15);
-            color: var(--accent-light);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-        }
-
-        .badge-poc {
-            background: rgba(34, 197, 94, 0.15);
-            color: var(--success);
-            border: 1px solid rgba(34, 197, 94, 0.3);
-        }
-
         .header h1 {
-            font-size: 28px;
+            font-size: 48px;
             font-weight: 700;
-            margin-bottom: 8px;
-            letter-spacing: -0.5px;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
         }
 
         .header-subtitle {
-            color: var(--text-secondary);
-            font-size: 15px;
+            color: var(--n600);
+            font-size: 18px;
+            letter-spacing: -0.01em;
+            line-height: 1.4;
         }
 
         .header-meta {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 16px;
-            margin-top: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1px;
+            margin-top: 32px;
+            background: var(--n1000);
+            border-radius: 12px;
+            overflow: hidden;
         }
 
         .meta-item {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 12px 16px;
+            background: var(--n1200);
+            padding: 16px 20px;
         }
 
         .meta-label {
+            font-family: 'SF Mono', 'Fira Code', monospace;
             font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            color: var(--n700);
             margin-bottom: 4px;
         }
 
         .meta-value {
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 500;
-            color: var(--text-primary);
+            color: var(--n300);
         }
 
-        /* Section */
+        /* Sections */
         .section {
-            margin-bottom: 48px;
+            margin-bottom: 64px;
         }
 
         .section-header {
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 12px;
+            margin-bottom: 24px;
         }
 
         .section-header h2 {
-            font-size: 18px;
-            font-weight: 600;
-            letter-spacing: -0.3px;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1;
         }
 
         .section-number {
@@ -145,88 +132,140 @@
             width: 28px;
             height: 28px;
             border-radius: 8px;
-            background: rgba(99, 102, 241, 0.15);
-            color: var(--accent-light);
+            background: rgba(255, 230, 0, 0.12);
+            color: var(--y400);
+            font-family: 'SF Mono', 'Fira Code', monospace;
             font-size: 13px;
             font-weight: 700;
         }
 
-        /* Cards */
-        .card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
+        /* Context panel */
+        .context-panel {
+            background: var(--n1200);
+            border: 1px solid var(--n1000);
             border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 16px;
-            transition: border-color 0.2s;
+            padding: 32px;
+            margin-bottom: 64px;
         }
 
-        .card:hover {
-            border-color: rgba(99, 102, 241, 0.3);
-        }
-
-        .card-title {
-            font-size: 15px;
+        .context-panel h3 {
+            font-size: 16px;
             font-weight: 600;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .card-description {
-            color: var(--text-secondary);
-            font-size: 13px;
             margin-bottom: 16px;
+            color: var(--n100);
         }
 
-        /* Use Case Cards */
+        .context-panel p {
+            font-size: 15px;
+            color: var(--n600);
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .context-highlight {
+            border-left: 3px solid var(--y400);
+            padding-left: 16px;
+            margin: 16px 0;
+            font-style: italic;
+            color: var(--n500);
+            font-size: 15px;
+        }
+
+        /* Criteria table */
+        .criteria-card {
+            background: var(--n1200);
+            border: 1px solid var(--n1000);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .criteria-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .criteria-table th {
+            text-align: left;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--n700);
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--n1000);
+            background: var(--n1300);
+        }
+
+        .criteria-table td {
+            padding: 14px 20px;
+            font-size: 14px;
+            border-bottom: 1px solid var(--n1100);
+            color: var(--n500);
+        }
+
+        .criteria-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .target-value {
+            font-weight: 700;
+            color: var(--y400);
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 13px;
+        }
+
+        /* Use case cards */
         .usecase-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 16px;
+            gap: 12px;
         }
 
         .usecase-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
+            background: var(--n1200);
+            border: 1px solid var(--n1000);
             border-radius: 12px;
             padding: 24px;
-            transition: all 0.2s;
+            transition: border-color 0.2s;
         }
 
         .usecase-card:hover {
-            border-color: rgba(99, 102, 241, 0.4);
-            transform: translateY(-1px);
+            border-color: var(--n900);
         }
 
         .usecase-header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: center;
             margin-bottom: 16px;
         }
 
         .usecase-title {
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 600;
+            color: var(--n100);
         }
 
         .usecase-tag {
+            font-family: 'SF Mono', 'Fira Code', monospace;
             font-size: 11px;
-            padding: 3px 8px;
-            border-radius: 6px;
+            padding: 4px 10px;
+            border-radius: 9999px;
             font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
         }
 
         .tag-native {
-            background: rgba(34, 197, 94, 0.12);
-            color: var(--success);
+            background: rgba(122, 219, 18, 0.12);
+            color: var(--g500);
+            border: 1px solid rgba(122, 219, 18, 0.25);
         }
 
         .tag-skill {
-            background: rgba(245, 158, 11, 0.12);
-            color: var(--warning);
+            background: rgba(255, 230, 0, 0.1);
+            color: var(--y400);
+            border: 1px solid rgba(255, 230, 0, 0.25);
         }
 
         .questions-list {
@@ -236,11 +275,11 @@
 
         .questions-list li {
             padding: 8px 0;
-            padding-left: 20px;
+            padding-left: 16px;
             position: relative;
-            font-size: 13px;
-            color: var(--text-secondary);
-            border-bottom: 1px solid rgba(42, 42, 58, 0.5);
+            font-size: 14px;
+            color: var(--n600);
+            border-bottom: 1px solid var(--n1100);
         }
 
         .questions-list li:last-child {
@@ -251,62 +290,23 @@
             content: '';
             position: absolute;
             left: 0;
-            top: 14px;
-            width: 6px;
-            height: 6px;
+            top: 15px;
+            width: 5px;
+            height: 5px;
             border-radius: 50%;
-            background: var(--accent);
+            background: var(--y400);
         }
 
-        /* Success Criteria Table */
-        .criteria-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 16px;
-        }
-
-        .criteria-table th {
-            text-align: left;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--text-muted);
-            padding: 10px 16px;
-            border-bottom: 1px solid var(--border);
-            background: var(--bg-secondary);
-        }
-
-        .criteria-table th:first-child {
-            border-radius: 8px 0 0 0;
-        }
-
-        .criteria-table th:last-child {
-            border-radius: 0 8px 0 0;
-        }
-
-        .criteria-table td {
-            padding: 12px 16px;
+        .card-description {
+            color: var(--n700);
             font-size: 13px;
-            border-bottom: 1px solid rgba(42, 42, 58, 0.5);
-            color: var(--text-secondary);
-        }
-
-        .criteria-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .target-value {
-            font-weight: 600;
-            color: var(--accent-light);
-            font-family: 'JetBrains Mono', 'SF Mono', monospace;
-            font-size: 12px;
         }
 
         /* Dependencies */
         .dep-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 8px;
+            gap: 6px;
         }
 
         .dep-item {
@@ -315,19 +315,19 @@
             align-items: center;
             gap: 16px;
             padding: 12px 16px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
+            background: var(--n1200);
+            border: 1px solid var(--n1100);
             border-radius: 8px;
-            font-size: 13px;
+            font-size: 14px;
         }
 
         .dep-name {
-            color: var(--text-primary);
+            color: var(--n400);
             font-weight: 500;
         }
 
         .dep-owner {
-            color: var(--text-muted);
+            color: var(--n700);
             font-size: 12px;
         }
 
@@ -335,30 +335,11 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
+            font-family: 'SF Mono', 'Fira Code', monospace;
             font-size: 11px;
             font-weight: 500;
-            padding: 4px 8px;
-            border-radius: 6px;
-        }
-
-        .status-done {
-            background: rgba(34, 197, 94, 0.12);
-            color: var(--success);
-        }
-
-        .status-inprogress {
-            background: rgba(59, 130, 246, 0.12);
-            color: var(--info);
-        }
-
-        .status-tbd {
-            background: rgba(107, 107, 123, 0.12);
-            color: var(--text-muted);
-        }
-
-        .status-blocked {
-            background: rgba(239, 68, 68, 0.12);
-            color: var(--danger);
+            padding: 4px 10px;
+            border-radius: 9999px;
         }
 
         .status-dot {
@@ -367,12 +348,35 @@
             border-radius: 50%;
         }
 
-        .status-done .status-dot { background: var(--success); }
-        .status-inprogress .status-dot { background: var(--info); }
-        .status-tbd .status-dot { background: var(--text-muted); }
-        .status-blocked .status-dot { background: var(--danger); }
+        .status-done {
+            background: rgba(122, 219, 18, 0.1);
+            color: var(--g500);
+            border: 1px solid rgba(122, 219, 18, 0.2);
+        }
+        .status-done .status-dot { background: var(--g500); }
+
+        .status-inprogress {
+            background: rgba(57, 104, 246, 0.1);
+            color: var(--b500);
+            border: 1px solid rgba(57, 104, 246, 0.2);
+        }
+        .status-inprogress .status-dot { background: var(--b500); }
+
+        .status-tbd {
+            background: rgba(122, 117, 121, 0.1);
+            color: var(--n700);
+            border: 1px solid rgba(122, 117, 121, 0.2);
+        }
+        .status-tbd .status-dot { background: var(--n700); }
 
         /* Timeline */
+        .timeline-card {
+            background: var(--n1200);
+            border: 1px solid var(--n1000);
+            border-radius: 12px;
+            padding: 32px;
+        }
+
         .timeline {
             position: relative;
             padding-left: 24px;
@@ -381,22 +385,20 @@
         .timeline::before {
             content: '';
             position: absolute;
-            left: 8px;
-            top: 0;
-            bottom: 0;
+            left: 7px;
+            top: 8px;
+            bottom: 8px;
             width: 2px;
-            background: var(--border);
+            background: var(--n1000);
             border-radius: 1px;
         }
 
         .timeline-item {
             position: relative;
-            padding-bottom: 24px;
+            padding-bottom: 28px;
         }
 
-        .timeline-item:last-child {
-            padding-bottom: 0;
-        }
+        .timeline-item:last-child { padding-bottom: 0; }
 
         .timeline-dot {
             position: absolute;
@@ -405,64 +407,37 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background: var(--bg-primary);
-            border: 2px solid var(--accent);
+            background: var(--n1300);
+            border: 2px solid var(--n800);
         }
 
         .timeline-item.active .timeline-dot {
-            background: var(--accent);
-            box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
+            background: var(--y400);
+            border-color: var(--y400);
+            box-shadow: 0 0 12px rgba(255, 230, 0, 0.3);
         }
 
         .timeline-week {
+            font-family: 'SF Mono', 'Fira Code', monospace;
             font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--accent-light);
-            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: var(--y400);
+            font-weight: 500;
             margin-bottom: 4px;
         }
 
         .timeline-title {
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 600;
             margin-bottom: 4px;
+            color: var(--n100);
         }
 
         .timeline-desc {
             font-size: 13px;
-            color: var(--text-secondary);
-        }
-
-        /* Context panel */
-        .context-panel {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 32px;
-        }
-
-        .context-panel h3 {
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: var(--text-primary);
-        }
-
-        .context-panel p {
-            font-size: 13px;
-            color: var(--text-secondary);
-            margin-bottom: 8px;
-        }
-
-        .context-highlight {
-            border-left: 3px solid var(--accent);
-            padding-left: 12px;
-            margin: 12px 0;
-            font-style: italic;
-            color: var(--text-secondary);
-            font-size: 13px;
+            color: var(--n700);
+            line-height: 1.5;
         }
 
         /* Risks */
@@ -472,10 +447,10 @@
             gap: 12px;
             align-items: start;
             padding: 14px 16px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
+            background: var(--n1200);
+            border: 1px solid var(--n1100);
             border-radius: 8px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .risk-icon {
@@ -485,32 +460,43 @@
             margin-top: 6px;
         }
 
-        .risk-high { background: var(--danger); }
-        .risk-med { background: var(--warning); }
-        .risk-low { background: var(--success); }
+        .risk-high { background: var(--r400); }
+        .risk-med { background: var(--o400); }
 
         .risk-text {
-            font-size: 13px;
-            color: var(--text-secondary);
+            font-size: 14px;
+            color: var(--n600);
         }
 
         .risk-text strong {
-            color: var(--text-primary);
+            color: var(--n300);
             font-weight: 500;
         }
 
         .risk-mitigation {
             font-size: 12px;
-            color: var(--text-muted);
+            color: var(--n700);
             max-width: 280px;
             text-align: right;
         }
 
+        /* Decision criteria */
+        .decision-card {
+            background: var(--n1200);
+            border: 1px solid var(--n1000);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .decision-card .card-description {
+            margin-bottom: 16px;
+        }
+
         /* Footer */
         .footer {
-            margin-top: 48px;
+            margin-top: 64px;
             padding-top: 24px;
-            border-top: 1px solid var(--border);
+            border-top: 1px solid var(--n1100);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -518,46 +504,20 @@
 
         .footer-left {
             font-size: 12px;
-            color: var(--text-muted);
+            color: var(--n800);
         }
 
-        .footer-right {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-
-        .devrev-logo {
-            width: 16px;
-            height: 16px;
-            background: var(--accent);
-            border-radius: 4px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 9px;
-            color: white;
+        .footer-logo {
+            height: 20px;
+            opacity: 0.5;
         }
 
         @media (max-width: 768px) {
-            .header-meta {
-                grid-template-columns: 1fr 1fr;
-            }
-            .dep-item {
-                grid-template-columns: 1fr;
-                gap: 8px;
-            }
-            .risk-item {
-                grid-template-columns: auto 1fr;
-            }
-            .risk-mitigation {
-                grid-column: 2;
-                text-align: left;
-                max-width: none;
-            }
+            .header h1 { font-size: 32px; }
+            .header-meta { grid-template-columns: 1fr 1fr; }
+            .dep-item { grid-template-columns: 1fr; gap: 8px; }
+            .risk-item { grid-template-columns: auto 1fr; }
+            .risk-mitigation { grid-column: 2; text-align: left; max-width: none; }
         }
     </style>
 </head>
@@ -565,11 +525,9 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <div class="header-top">
-                <span class="badge badge-poc">PoC Active</span>
-            </div>
-            <h1>Alliance Technical Group | Computer for Sales</h1>
-            <p class="header-subtitle">PoC scope, success criteria, and delivery plan for Salesforce-connected Computer workspace</p>
+            <div class="eyebrow">PoC Active</div>
+            <h1>Alliance Technical Group</h1>
+            <p class="header-subtitle">Computer for Sales - PoC scope, success criteria, and delivery plan</p>
 
             <div class="header-meta">
                 <div class="meta-item">
@@ -577,11 +535,11 @@
                     <div class="meta-value">Alliance Technical Group</div>
                 </div>
                 <div class="meta-item">
-                    <div class="meta-label">Use Case</div>
+                    <div class="meta-label">Use case</div>
                     <div class="meta-value">Computer for Sales</div>
                 </div>
                 <div class="meta-item">
-                    <div class="meta-label">Alliance Technical Group Team</div>
+                    <div class="meta-label">ATG Team</div>
                     <div class="meta-value">Derek Neal, Kim Van Soelen, Ashley Blatchford</div>
                 </div>
                 <div class="meta-item">
@@ -589,7 +547,7 @@
                     <div class="meta-value">Will Rial (AE), Shaden Chehab (SE)</div>
                 </div>
                 <div class="meta-item">
-                    <div class="meta-label">Target Close</div>
+                    <div class="meta-label">Target close</div>
                     <div class="meta-value">June 30, 2026</div>
                 </div>
                 <div class="meta-item">
@@ -616,7 +574,7 @@
                 <h2>Quantitative success criteria</h2>
             </div>
 
-            <div class="card">
+            <div class="criteria-card">
                 <table class="criteria-table">
                     <thead>
                         <tr>
@@ -659,7 +617,6 @@
             </div>
 
             <div class="usecase-grid">
-                <!-- UC1 -->
                 <div class="usecase-card">
                     <div class="usecase-header">
                         <div class="usecase-title">Revenue validation & reporting</div>
@@ -669,10 +626,9 @@
                         <li>Total closed-won revenue by service line for Q1 2026</li>
                         <li>Top 10 accounts by closed-won dollar volume in Q1 2026</li>
                     </ul>
-                    <p class="card-description">Proves the SF connection works and Computer returns accurate revenue data. Validates against native SF report within &plusmn;1%.</p>
+                    <p class="card-description">Proves the SF connection works and Computer returns accurate revenue data. Validates against native SF report.</p>
                 </div>
 
-                <!-- UC2 -->
                 <div class="usecase-card">
                     <div class="usecase-header">
                         <div class="usecase-title">Operational & pipeline analytics</div>
@@ -687,7 +643,6 @@
                     <p class="card-description">Demonstrates Computer replaces ad-hoc SF reports. Multi-dimensional analysis without pre-built dashboards.</p>
                 </div>
 
-                <!-- UC3 -->
                 <div class="usecase-card">
                     <div class="usecase-header">
                         <div class="usecase-title">Bookings to Billings foundation</div>
@@ -702,7 +657,6 @@
                     <p class="card-description">Forward-looking revenue modeling foundation. Proves Computer can support the Bookings-to-Billings questions leadership asks.</p>
                 </div>
 
-                <!-- UC4 -->
                 <div class="usecase-card">
                     <div class="usecase-header">
                         <div class="usecase-title">BU bucketing & sub-service-line parsing</div>
@@ -713,7 +667,7 @@
                         <li>"Break down ACS into sub-service lines" (e.g., CEMS Integration vs. CEMS Service)</li>
                         <li>"How does CEMS Integration pipeline compare to CEMS Service?"</li>
                     </ul>
-                    <p class="card-description">Encodes ATG's business taxonomy so users ask naturally at BU or sub-service-line level without re-explaining mappings each session. This is what Claude cannot do persistently.</p>
+                    <p class="card-description">Encodes ATG's business taxonomy so users ask naturally at BU or sub-service-line level without re-explaining mappings each session.</p>
                 </div>
             </div>
         </div>
@@ -776,7 +730,7 @@
                 <h2>Delivery timeline</h2>
             </div>
 
-            <div class="card">
+            <div class="timeline-card">
                 <div class="timeline">
                     <div class="timeline-item active">
                         <div class="timeline-dot"></div>
@@ -800,7 +754,7 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-week">Week 4 (Jun 16 - 20)</div>
                         <div class="timeline-title">Demo & decision</div>
-                        <div class="timeline-desc">Full walkthrough with Kim (EB). Demonstrate value vs. Claude workflow. Collect feedback. Go/No-Go decision aligned to June 30 target close.</div>
+                        <div class="timeline-desc">Full walkthrough with Kim. Demonstrate value vs. Claude workflow. Collect feedback. Decision aligned to June 30 target close.</div>
                     </div>
                 </div>
             </div>
@@ -837,8 +791,8 @@
                 <h2>Decision criteria</h2>
             </div>
 
-            <div class="card">
-                <div class="card-description" style="margin-bottom:0">From Derek's evaluation framework:</div>
+            <div class="decision-card">
+                <p class="card-description">From Derek's evaluation framework:</p>
                 <ul class="questions-list" style="margin-top:12px">
                     <li>Can Computer answer real cross-sell and wallet-share questions against live Salesforce data - without manual exports?</li>
                     <li>Does it reduce Derek's (and Ryan's) time-to-answer for leadership revenue questions?</li>
@@ -851,11 +805,18 @@
 
         <!-- Footer -->
         <div class="footer">
-            <div class="footer-left">OPP-11344 | Alliance Technical Group | Last updated: May 28, 2026</div>
-            <div class="footer-right">
-                <span class="devrev-logo">D</span>
-                Built with Computer
-            </div>
+            <div class="footer-left">Alliance Technical Group | Last updated: May 29, 2026</div>
+            <svg class="footer-logo" viewBox="0 0 897 161" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M859.279 128.235H839.605V25.8359H859.279V56.3734C863.337 34.6068 872.172 25.8359 889.585 25.8359H896.25V47.3458H886.734C867.228 47.3458 859.279 55.115 859.279 74.1463V128.235Z" fill="white"/>
+                <path d="M690.886 131.46C683.784 131.46 677.749 129.418 672.895 125.36C667.09 120.506 663.161 112.75 661.504 102.9L652.322 48.2461L637.323 50.7631L634.473 33.8249L643.243 32.3482C644.9 32.0656 646.364 31.1539 647.34 29.7927C648.316 28.4186 648.701 26.7492 648.419 25.0926L644.759 3.28746L664.304 0L666.718 14.3313C667.719 20.3284 664.997 24.4634 662.544 26.8776C661.222 28.1746 659.848 29.1121 658.795 29.7413L701.403 22.5885L704.254 39.5266L671.88 44.9715L680.625 97.0188C681.588 102.785 683.438 106.714 686.25 109.039C689.203 111.478 693.3 112.21 698.783 111.286C704.395 110.348 708.851 108.384 713.692 106.111L714.026 105.957L719.535 123.55L719.291 123.678C712.267 127.235 707.053 129.328 698.051 130.831C695.56 131.255 693.184 131.46 690.911 131.46H690.886Z" fill="white"/>
+                <path d="M437.822 160.956H417.981V25.836H437.822V54.8967C442.701 33.5153 455.659 22.6641 476.321 22.6641C503.442 22.6641 518.993 42.4017 518.993 76.8046C518.993 111.207 503.121 131.613 476.539 131.613C455.312 131.613 442.278 120.659 437.822 99.0462V160.956ZM469.258 40.7451C449.572 40.7451 437.822 53.9849 437.822 76.1496V77.6906C437.822 99.5985 450.162 113.763 469.258 113.763C488.353 113.763 499.371 100.639 499.371 76.8046C499.371 52.9704 489.239 40.7323 469.258 40.7323V40.7451Z" fill="white"/>
+                <path d="M400.504 128.242H380.831V67.0639C380.831 57.1373 377.684 40.4816 356.65 40.4816C339.314 40.4816 328.964 50.4211 328.964 67.0639V128.242H309.29V67.0639C309.29 57.1373 306.144 40.4816 285.11 40.4816C267.774 40.4816 257.423 50.4211 257.423 67.0639V128.242H237.75V25.855H257.423V51.1659C261.982 32.4299 274.246 22.5547 292.982 22.5547C313.733 22.5547 325.984 33.4444 328.437 54.0553C332.046 32.8537 343.706 22.5547 364.072 22.5547C380.689 22.5547 400.491 29.4378 400.491 62.2483V128.242H400.504Z" fill="white"/>
+                <path d="M178.087 131.317C170.42 132.293 162.073 131.459 153.302 128.672C138.034 123.831 126.874 114.983 121.032 103.091C115.24 91.2771 114.803 76.7403 119.773 61.035C124.704 45.4709 133.591 33.9776 145.495 27.7751C157.155 21.701 171.139 20.969 185.933 25.6562C216.02 35.1847 229.093 61.4331 219.244 92.5356C212.027 115.317 197.118 128.89 178.087 131.317ZM165.142 41.2845C152.968 42.8255 143.35 51.7633 138.599 66.7624C131.716 88.5162 139.177 105.159 158.58 111.31C168.173 114.354 177.136 113.57 184.507 109.05C191.699 104.645 197.246 96.8118 200.559 86.3844C207.134 65.6066 199.365 48.9381 180.257 42.8897C174.928 41.2074 169.855 40.6938 165.155 41.2973L165.142 41.2845Z" fill="white"/>
+                <path d="M555.231 91.1771H537.779L534.299 25.8516H556.746L555.243 91.1771H555.231Z" fill="white"/>
+                <path d="M597.262 25.8516H619.709L616.229 91.1771H598.777L597.275 25.8516H597.262Z" fill="white"/>
+                <path d="M82.3785 91.1644C78.7572 102.362 72.2209 113.316 53.5878 113.316C43.52 113.316 35.1344 110.029 29.3301 103.813C23.4358 97.5082 20.3281 88.3007 20.3281 77.1927C20.3281 65.404 23.3844 56.2222 29.4071 49.8784C35.0317 43.9584 43.1604 40.8379 52.92 40.8379C68.4326 40.8379 78.1665 48.3503 82.6738 63.786L82.7381 64.0171H102.797L102.732 63.6319C97.7627 35.9581 81.5438 22.5 53.1383 22.5C20.8675 22.5 0 43.8814 0 76.9615C0 93.8483 5.09806 107.82 14.7292 117.374C24.1421 126.71 37.6514 131.641 53.7932 131.641C80.8889 131.641 97.2876 117.965 102.604 91.1644H82.3528H82.3785Z" fill="white"/>
+                <path d="M775.501 22.3984C759.783 22.3984 746.543 27.4966 737.181 37.1278C727.653 46.9389 722.619 61.0519 722.619 77.9387C722.619 111.109 742.973 131.707 775.732 131.707C800.246 131.707 816.632 120.239 822.629 98.8577H802.84C797.96 109.195 789.1 114.204 775.732 114.204C756.354 114.204 744.681 103.211 742.819 83.4606H822.822L822.848 83.2936C823.181 78.2468 823.297 74.3815 823.297 70.85C823.297 40.9675 804.985 22.3984 775.513 22.3984H775.501ZM774.833 39.6833C793.017 39.6833 803.02 48.9036 804.6 67.2929H743.127C745.914 49.1604 756.855 39.6833 774.833 39.6833Z" fill="white"/>
+            </svg>
         </div>
     </div>
 </body>
