@@ -110,19 +110,18 @@ PoC is considered successful when the following quantitative thresholds are met 
 
 ---
 
-## Phased rollout recommendation
+## Delivery timeline
 
-**Phase 1 - Validate the pipe (Week 1)**  
-Connect SF, verify field mapping, run Use Case 1 questions, confirm numbers match.
+**Target close date (signature on full-term DevRev partnership):** Friday, July 24, 2026
 
-**Phase 2 - Operational analytics (Week 1-2)**  
-Run Use Case 2 and 3 questions. Identify any missing fields (stage history, custom dates). Resolve gaps.
-
-**Phase 3 - BU skill build (Week 2-3)**  
-Collect mapping rules from ATG. Build and install the bucketing skill. Validate Use Case 4.
-
-**Phase 4 - Demo & expand (Week 3-4)**  
-Full walkthrough with ATG stakeholders. Collect feedback. Identify additional questions or data sources for production rollout.
+| Phase | Window | Milestone |
+|-------|--------|-----------|
+| Success criteria signed off | Jun 16 - Jun 18 (Thu) | Derek confirms final success criteria + scope (today's call) |
+| Data foundation locked | Jun 16 - Jun 18 (Thu) | Fresh AirSync fully ingested; field mappings validated; aggregate queries match SF native reports (≥95% accuracy) |
+| Core use-case validation | Jun 23 - Jul 2 (Thu) | Run the full PoC question set; validate each pass/fail |
+| Skill + multiplayer demo | Jul 7 - Jul 10 (Fri) | BU bucketing skill, weekly leadership report agent, multiplayer collaboration with Ashley/Kim |
+| Final review + go/no-go | Jul 14 - Jul 17 (Fri) | Results scorecard reviewed against success criteria; PoC decision |
+| Procurement + signature | Jul 20 - Jul 24 (Fri) | Contract, procurement steps, and signature on full-term partnership |
 
 ---
 
