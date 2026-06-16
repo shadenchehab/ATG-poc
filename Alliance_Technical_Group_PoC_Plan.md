@@ -119,6 +119,6 @@ PoC is considered successful when the following quantitative thresholds are met 
 | Success criteria signed off | Jun 16 - Jun 18 (Thu) | Derek confirms final success criteria + scope (today's call) |
 | Data foundation locked | Jun 16 - Jun 18 (Thu) | Fresh AirSync fully ingested; field mappings validated; aggregate queries match SF native reports (≥95% accuracy) |
 | Core use-case validation | Jun 23 - Jul 2 (Thu) | Run the full PoC question set; validate each pass/fail |
-| Skill + multiplayer demo | Jul 7 - Jul 10 (Fri) | BU bucketing skill, weekly leadership report agent, multiplayer collaboration with Ashley/Kim |
+| Skill + multiplayer demo | Jul 7 - Jul 10 (Fri) | BU bucketing skill, weekly leadership report agent, multiplayer collaboration with Kim |
 | Final review + go/no-go | Jul 14 - Jul 17 (Fri) | Results scorecard reviewed against success criteria; PoC decision |
 | Procurement + signature | Jul 20 - Jul 24 (Fri) | Contract, procurement steps, and signature on full-term partnership |
