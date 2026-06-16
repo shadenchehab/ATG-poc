@@ -106,7 +106,7 @@ PoC is considered successful when the following quantitative thresholds are met 
 | "Anticipated Start Date" custom field synced | Use Case 3 (close-to-start lag) | TBD | ATG to confirm field API name |
 | BU grouping taxonomy provided | Use Case 4 | Completed | ATG stakeholder |
 | Sub-service-line parsing rules provided | Use Case 4 | Completed | ATG stakeholder |
-| Custom BU bucketing skill built | Use Case 4 | TBD | DevRev (post-mapping receipt) |
+| Custom BU bucketing skill built | Use Case 4 | Completed | Shaden (post-mapping) |
 
 ---
 
