@@ -440,46 +440,6 @@
             line-height: 1.5;
         }
 
-        /* Risks */
-        .risk-item {
-            display: grid;
-            grid-template-columns: auto 1fr auto;
-            gap: 12px;
-            align-items: start;
-            padding: 14px 16px;
-            background: var(--n1200);
-            border: 1px solid var(--n1100);
-            border-radius: 8px;
-            margin-bottom: 6px;
-        }
-
-        .risk-icon {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            margin-top: 6px;
-        }
-
-        .risk-high { background: var(--r400); }
-        .risk-med { background: var(--o400); }
-
-        .risk-text {
-            font-size: 14px;
-            color: var(--n600);
-        }
-
-        .risk-text strong {
-            color: var(--n300);
-            font-weight: 500;
-        }
-
-        .risk-mitigation {
-            font-size: 12px;
-            color: var(--n700);
-            max-width: 280px;
-            text-align: right;
-        }
-
         /* Decision criteria */
         .decision-card {
             background: var(--n1200);
@@ -516,8 +476,6 @@
             .header h1 { font-size: 32px; }
             .header-meta { grid-template-columns: 1fr 1fr; }
             .dep-item { grid-template-columns: 1fr; gap: 8px; }
-            .risk-item { grid-template-columns: auto 1fr; }
-            .risk-mitigation { grid-column: 2; text-align: left; max-width: none; }
         }
     </style>
 </head>
@@ -772,34 +730,10 @@
             </div>
         </div>
 
-        <!-- Risks -->
-        <div class="section">
-            <div class="section-header">
-                <div class="section-number">5</div>
-                <h2>Risks & mitigations</h2>
-            </div>
-
-            <div class="risk-item">
-                <div class="risk-icon risk-high"></div>
-                <div class="risk-text"><strong>Stage history not available in SF sync</strong> - Cannot answer time-in-stage questions (UC2.4)</div>
-                <div class="risk-mitigation">Pre-validate during setup; fallback to estimated duration from snapshot timestamps</div>
-            </div>
-            <div class="risk-item">
-                <div class="risk-icon risk-med"></div>
-                <div class="risk-text"><strong>"Anticipated Start Date" field missing or sparse</strong> - UC3.3 partially blocked</div>
-                <div class="risk-mitigation">Confirm existence upfront; if sparse, flag data quality gap to Derek</div>
-            </div>
-            <div class="risk-item">
-                <div class="risk-icon risk-med"></div>
-                <div class="risk-text"><strong>Service line values inconsistent</strong> - Typos/variations break BU grouping logic</div>
-                <div class="risk-mitigation">Pull distinct values early; build normalization into the skill</div>
-            </div>
-        </div>
-
         <!-- Decision Criteria -->
         <div class="section">
             <div class="section-header">
-                <div class="section-number">6</div>
+                <div class="section-number">5</div>
                 <h2>Decision criteria</h2>
             </div>
 

@@ -122,13 +122,3 @@ PoC is considered successful when the following quantitative thresholds are met 
 | Skill + multiplayer demo | Jul 7 - Jul 10 (Fri) | BU bucketing skill, weekly leadership report agent, multiplayer collaboration with Ashley/Kim |
 | Final review + go/no-go | Jul 14 - Jul 17 (Fri) | Results scorecard reviewed against success criteria; PoC decision |
 | Procurement + signature | Jul 20 - Jul 24 (Fri) | Contract, procurement steps, and signature on full-term partnership |
-
----
-
-## Risks & mitigations
-
-| Risk | Impact | Mitigation |
-|------|--------|------------|
-| Stage history not available in SF sync | Cannot answer time-in-stage questions | Pre-validate during setup; if unavailable, calculate estimated stage duration from snapshot timestamps |
-| "Anticipated Start Date" field doesn't exist or is rarely populated | Use Case 3 partially blocked | Confirm field existence upfront; if sparse, flag data quality to ATG |
-| Service line values are inconsistent (typos, variations) | Grouping logic breaks | Pull distinct values early; build normalization into the skill |
