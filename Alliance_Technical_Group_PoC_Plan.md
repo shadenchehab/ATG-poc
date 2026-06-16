@@ -103,7 +103,7 @@ PoC is considered successful when the following quantitative thresholds are met 
 | Opportunity object with standard fields (Amount, Stage, Close Date, Created Date, Account) | All use cases | TBD | Verified during sync setup |
 | Service Line field identified and synced | All use cases | Completed | service_line_c (Salesforce custom field) |
 | Stage history / duration data synced | Use Case 2 (time-in-stage) | Completed | Confirm SF tracks OpportunityHistory |
-| "Anticipated Start Date" custom field synced | Use Case 3 (close-to-start lag) | TBD | ATG to confirm field API name |
+| "Anticipated Start Date" custom field synced | Use Case 3 (close-to-start lag) | Completed | ATG to confirm field API name |
 | BU grouping taxonomy provided | Use Case 4 | Completed | ATG stakeholder |
 | Sub-service-line parsing rules provided | Use Case 4 | Completed | ATG stakeholder |
 | Custom BU bucketing skill built | Use Case 4 | Completed | Shaden (post-mapping) |
