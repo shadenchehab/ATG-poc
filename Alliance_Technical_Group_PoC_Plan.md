@@ -99,7 +99,7 @@ PoC is considered successful when the following quantitative thresholds are met 
 
 | Dependency | Required for | Status | Owner |
 |------------|-------------|--------|-------|
-| Salesforce sync configured and active | All use cases | TBD | DevRev / ATG Admin |
+| Salesforce sync configured and active | All use cases | Completed | DevRev + Derek |
 | Opportunity object with standard fields (Amount, Stage, Close Date, Created Date, Account) | All use cases | TBD | Verified during sync setup |
 | Service Line field identified and synced | All use cases | Completed | service_line_c (Salesforce custom field) |
 | Stage history / duration data synced | Use Case 2 (time-in-stage) | Completed | Confirm SF tracks OpportunityHistory |
